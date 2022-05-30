@@ -9,23 +9,40 @@ Cenário: Fórmula
       Então é exibida a tela de "formulação de ração"
 
 
-Cenário: Cadastro Válido 
-      Dado o usuário está na tela de "fórmula"
-      Quando preenche os seguintes campos
+Cenário: Cadastro da fórmula Válido em confinamento
+      Dado o usuário estar na tela de "fórmula"
+      Quando o usuário preenche os seguintes campos
         |nome da fórmula |identificação do produto|unidade base|peso vivo|ganho de peso diário|adicionar insumo|
-        |crescimento|milho silagem|Quilograma|320|1,20|Garaná 100%|
+        |milho           |milho silagem           |Quilograma  |320      |1,20                |Garaná 100%     |
       E acessa o botão "salvar novo"
-      Então o Cadastro da Fórmula é
+      Então é feito o cadastro da fórmula 
 
-Cenário: Cadastro Inválido 
+Cenário: Cadastro da fórmula Inválido em confinamento 
       Dado o usuário está na tela de "fórmula"
-      E preenche os seguintes campos com valores inválido 
-          |<nome do fórmula>|<identificação do produto>|<unidade base>|<peso vivo>|<ganho de peso diário>|<adicionar insumo>|
-      Quando ele acessa o botão "salvar novo"
-      Então o sistema retorna á "<mensagem>"
+      E preenche os seguintes campos com valores inválido "<nome do fórmula>","<identificação do produto>","<unidade base>","<peso vivo>","<ganho de peso diário>" e "<adicionar insumo>"
+      Quando ele clica no botão "salvar novo"
+      Então o sistema retorna a seguinte mensagem informando "o somatório do percentual da fórmula precisa ser 100%"
 Exemplos:
-          |exemplo|nome da fórmula |identificação do produto|unidade base|peso vivo|ganho de peso diário|adicionar insumo|Mensagem|
-          |exemplo|crescimento|milho silagem|quilograma|320|1,20|Guaraná 50%|o somatório do percentual da fórmula precisa ser 100%|
+          |campo                   |valor        |
+          |nome da fórmula         |milho        |
+          |identificação do produto|milho silagem|
+          |unidade base            |quilograma   |
+          |peso vivo               |320          |
+          |ganho de peso diário    |1,20         |
+          |adicionar insumo        |Guaraná 50%  |
+
+
+
+
+
+
+
+
+
+
+
+
+
  Cenário: Esquema de cenário:cadastrar com campos não preenchidos
         Dado o usuário estar na tela "fórmula"  
         E tenha adicionado um "insumo"
