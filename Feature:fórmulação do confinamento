@@ -1,8 +1,8 @@
 #language: pt
 
-Feature: Fórmula
+Feature: Fórmulação em confinamento
 
-Cenário: Fórmula 
+Cenário:Acessar Fórmula de ração em confinamento.
       Dado o usuário estar navegando no "painel de controle" na tela "visão de escritório"
       E selecionou a opção "confinamento"
       Quando ele aciona o botão "fórmulação de ração"
@@ -32,32 +32,22 @@ Exemplos:
           |adicionar insumo        |Guaraná 50%  |
 
 
-
-
-
-
-
-
-
-
-
-
-
- Cenário: Esquema de cenário:cadastrar com campos não preenchidos
+ Esquema do cenário:Cadastro da fórmula com campos não preenchidos
         Dado o usuário estar na tela "fórmula"  
         E tenha adicionado um "insumo"
         Quando o usuário não preenche o "<campo>" com "<valor>" 
-        E não selecionar um valor na "opção"
+        E não seleciona um valor na "opção"
         Então o usuário aciona "salvar novo"
-        Então o sistema sinaliza os campos deixando-os em vermelho
+        Então o sistema sinaliza os campos deixando-os em "vermelho"
  Exemplos:
-        | campo                    |valor|
-        | nome da fórmula          |     |
-        | identificação do produto |     |
-        | unidade base             |     |
-        | peso vivo                |     |
-        | ganho de peso diário     |     |
-        | adicionar insumo         |  X  |
+        | campo                    |valor   |
+        | nome da fórmula          |vermelho|
+        | identificação do produto |vermelho|
+        | unidade base             |vermelho|
+        | peso vivo                |vermelho|
+        | ganho de peso diário     |vermelho|
+        | adicionar insumo         |   X    |
+
 
 Cenário: Cancelar Fórmula 
      Dado o usuário está na tela "fórmula"
