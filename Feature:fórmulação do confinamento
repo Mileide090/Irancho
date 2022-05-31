@@ -22,7 +22,7 @@ Cenário: Cadastro da fórmula Inválido em confinamento
       Dado o usuário está na tela de "fórmula"
       E preenche os seguintes campos com valores inválido "<nome da fórmula>","<identificação do produto>","<unidade base>","<peso vivo>","<ganho de peso diário>" e "<adicionar insumo>"
       Quando ele clica no botão "salvar novo"
-      Então o sistema retorna a seguinte mensagem informando "o somatório do percentual da fórmula precisa ser 100%"
+      Então o sistema retorna a mensagem informando "o somatório do percentual da fórmula precisa ser 100%"
 Exemplos:
           |campo                   |valor        |
           |nome da fórmula         |milho        |
