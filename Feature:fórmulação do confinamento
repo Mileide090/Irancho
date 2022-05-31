@@ -40,12 +40,12 @@ Exemplos:
         Então o usuário aciona "salvar novo"
         Então o sistema sinaliza os campos deixando-os em "vermelho"
  Exemplos:
-        | campo                    |valor   |
-        | nome da fórmula          |vermelho|
-        | identificação do produto |vermelho|
-        | unidade base             |vermelho|
-        | peso vivo                |vermelho|
-        | ganho de peso diário     |vermelho|
+        | campo                    | valor  |
+        | nome da fórmula          |        |
+        | identificação do produto |        |
+        | unidade base             |        |
+        | peso vivo                |        |
+        | ganho de peso diário     |        |
         | adicionar insumo         |   X    |
 
 
