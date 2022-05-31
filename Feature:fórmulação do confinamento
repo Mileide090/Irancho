@@ -11,7 +11,7 @@ Cenário:Acessar Fórmula de ração em confinamento.
 
 Cenário: Cadastro da fórmula Válido em confinamento
       Dado o usuário estar na tela de "fórmula"
-      Quando o usuário preenche os seguintes campos
+      Quando o usuário preenche os campos com valores
         |nome da fórmula |identificação do produto|unidade base|peso vivo|ganho de peso diário|adicionar insumo|
         |milho           |milho silagem           |Quilograma  |320      |1,20                |Garaná 100%     |
       E acessa o botão "salvar novo"
@@ -19,9 +19,9 @@ Cenário: Cadastro da fórmula Válido em confinamento
 
 
 Cenário: Cadastro da fórmula Inválido em confinamento 
-      Dado o usuário está na tela de "fórmula"
-      E preenche os seguintes campos com valores inválido "<nome da fórmula>","<identificação do produto>","<unidade base>","<peso vivo>","<ganho de peso diário>" e "<adicionar insumo>"
-      Quando ele clica no botão "salvar novo"
+      Dado o usuário estar na tela de "fórmula"
+      Quando o usuário preenche os seguintes campos com valores inválido "<nome da fórmula>","<identificação do produto>","<unidade base>","<peso vivo>","<ganho de peso diário>" e "<adicionar insumo>"
+      E ele clica no botão "salvar novo"
       Então o sistema retorna a mensagem informando "o somatório do percentual da fórmula precisa ser 100%"
 Exemplos:
           |campo                   |valor        |
@@ -34,11 +34,11 @@ Exemplos:
 
 
  Esquema do cenário:Cadastro da fórmula da ração com campos não preenchidos em confinamento 
-        Dado o usuário estar na tela "fórmula"  
+        Dado o usuário estar na tela da "fórmula"  
         E tenha adicionado um "insumo"
         Quando o usuário não preenche o "<campo>" com "<valor>" 
         E não seleciona um valor na "opção"
-        Então o usuário aciona "salvar novo"
+        Quando o usuário aciona "salvar novo"
         Então o sistema sinaliza os campos deixando-os em "vermelho"
  Exemplos:
         | campo                    | valor  |
@@ -52,13 +52,13 @@ Exemplos:
 
 Cenário: Cancelar Fórmula de ração em confinamento 
      Dado o usuário estar na tela "fórmula"
-     Quando o usuário preencheu os campos de cadastro da fórmula
+     Quando o usuário tenha cadastrado com valores da fórmula
      E clica no botão "cancelar"
-     Então é feito o cancelamento do cadastro da fórmula preenchida.
+     Então é cancelado o cadastro da fórmula.
+
 
 Cenário:Cadastro de embalagem
-     Dado o usuário está na tela de "fórmula"
-     E acessa o botão nova embalagem 
-     Quando preenche os seguintes campos
-             |nome embalagem|unidade de medida|Quantidade|
+     Dado o usuário estar na tela da "fórmula"
+     E acessa o botão "nova embalagem"
+     Quando o usuário preenche os seguintes campos "<nome embalagem>", "<unidade de medida>"e "<Quantidade>"
      Então o cadastro da embalagem é efetuada.
