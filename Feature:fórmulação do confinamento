@@ -1,6 +1,6 @@
 #language: pt
 
-Feature: Fórmulação em confinamento
+Feature: Fórmulação de Ração em confinamento
 
 Cenário:Acessar Fórmula de ração em confinamento.
       Dado o usuário estar navegando no "painel de controle" na tela "visão de escritório"
@@ -17,9 +17,10 @@ Cenário: Cadastro da fórmula Válido em confinamento
       E acessa o botão "salvar novo"
       Então é feito o cadastro da fórmula 
 
+
 Cenário: Cadastro da fórmula Inválido em confinamento 
       Dado o usuário está na tela de "fórmula"
-      E preenche os seguintes campos com valores inválido "<nome do fórmula>","<identificação do produto>","<unidade base>","<peso vivo>","<ganho de peso diário>" e "<adicionar insumo>"
+      E preenche os seguintes campos com valores inválido "<nome da fórmula>","<identificação do produto>","<unidade base>","<peso vivo>","<ganho de peso diário>" e "<adicionar insumo>"
       Quando ele clica no botão "salvar novo"
       Então o sistema retorna a seguinte mensagem informando "o somatório do percentual da fórmula precisa ser 100%"
 Exemplos:
@@ -32,7 +33,7 @@ Exemplos:
           |adicionar insumo        |Guaraná 50%  |
 
 
- Esquema do cenário:Cadastro da fórmula com campos não preenchidos
+ Esquema do cenário:Cadastro da fórmula da ração com campos não preenchidos em confinamento 
         Dado o usuário estar na tela "fórmula"  
         E tenha adicionado um "insumo"
         Quando o usuário não preenche o "<campo>" com "<valor>" 
@@ -49,11 +50,11 @@ Exemplos:
         | adicionar insumo         |   X    |
 
 
-Cenário: Cancelar Fórmula 
-     Dado o usuário está na tela "fórmula"
-     Quando preencheu os campos da "fórmula"
-     E selecionou o botão "cancelar"
-     Então é cancelado o cadastro da fórmula.
+Cenário: Cancelar Fórmula de ração em confinamento 
+     Dado o usuário estar na tela "fórmula"
+     Quando o usuário preencheu os campos de cadastro da fórmula
+     E clica no botão "cancelar"
+     Então é feito o cancelamento do cadastro da fórmula preenchida.
 
 Cenário:Cadastro de embalagem
      Dado o usuário está na tela de "fórmula"
