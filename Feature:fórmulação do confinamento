@@ -62,5 +62,5 @@ Cenário:Cadastro de embalagem
      E clica no botão "nova embalagem"
      Quando o usuário preenche os seguintes campos 
         |nome embalagem|unidade de medida|Quantidade|
-        |Premix        |100              
+        |Premix        |100kg            |7         |
      Então o cadastro da embalagem é efetuada.
