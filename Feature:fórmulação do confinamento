@@ -5,7 +5,7 @@ Feature: Fórmulação de Ração em confinamento
 Cenário:Acessar Fórmula de ração em confinamento.
       Dado o usuário estar navegando no "painel de controle" na tela "visão de escritório"
       E selecionou a opção "confinamento"
-      Quando ele aciona o botão "fórmulação de ração"
+      Quando o usuário clica o botão "fórmulação de ração"
       Então é exibida a tela de "formulação de ração"
 
 
@@ -14,8 +14,8 @@ Cenário: Cadastro da fórmula Válido em confinamento
       Quando o usuário preenche os campos com valores
         |nome da fórmula |identificação do produto|unidade base|peso vivo|ganho de peso diário|adicionar insumo|
         |milho           |milho silagem           |Quilograma  |320      |1,20                |Garaná 100%     |
-      E acessa o botão "salvar novo"
-      Então é feito o cadastro da fórmula 
+      E clica no botão "salvar novo"
+      Então é feito o cadastro da "fórmula"
 
 
 Cenário: Cadastro da fórmula Inválido em confinamento 
@@ -33,9 +33,9 @@ Exemplos:
           |adicionar insumo        |Guaraná 50%  |
 
 
- Esquema do cenário:Cadastro da fórmula da ração com campos não preenchidos em confinamento 
+ Esquema do cenário:Cadastro da formulação de ração com campos não preenchidos em confinamento 
         Dado o usuário estar na tela da "fórmula"  
-        E tenha adicionado um "insumo"
+        E adicionou um valor no "insumo"
         Quando o usuário não preenche o "<campo>" com "<valor>" 
         E não seleciona um valor na "opção"
         Quando o usuário aciona "salvar novo"
