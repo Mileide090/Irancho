@@ -5,7 +5,7 @@ Feature:Batida em confinamento
 
 Cenário: Acessar Batida em confinamento 
      Dado o usuário estar em "painel de controle" na tela de "visão de escritório"
-     E ele acessa a opção "Confinamento"
+     E ele aciona a opção "Confinamento"
      Quando o usuário clica no botão "batida"
      Então é exibida a tela de "batida"
 
@@ -13,13 +13,13 @@ Cenário:cadastro válido em confinamento
       Dado o usuário estar na tela de "Batida"
       Quando o usuário preenche os seguintes campos 
             |Nome da fórmula|Data da batida|Embalagem de saída|Estoque de origem|Estoque de destino|Quantidade|Responsável (planejamento)|Responsável (produção)|
-      E seleciona o botão "salvar novo"
+      E clica no botão "salvar novo"
       Então é salvo o cadastro da "Batida"
 
 Cenário:Cadastro Recusado em confinamento 
       Dado o usuário estar na tela de "Batida"
       E não tenha cadastrado na tela "Fórmula" e "Fazenda"
-      Quando ele aciona o botão de "selecionar os campos"
+      Quando ele clica no botão de "selecionar os campos"
       Então o sistema sem o arquivo dos dados recusa o "cadastro"
 
 Cenário:Esquema de cenário com valores não preenchido.i
@@ -41,7 +41,7 @@ Exemplos:
 
 
 Cenário:Cancelar Batida
-      Dado o usuário está na tela de "batida"
-      Quando o usuário já preencheu os campos em "batida"
-      E acessa o botão "cancelar"
+      Dado o usuário estar na tela de "batida"
+      Quando o usuário já preencheu os campos "batida"
+      E aciona o botão "cancelar"
       Então é cancelado o cadastro da batida.
