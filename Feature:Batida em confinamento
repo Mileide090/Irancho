@@ -22,7 +22,11 @@ Cenário:Cadastro Recusado em confinamento
       Quando ele clica no botão de "selecionar os campos"
       Então o sistema sem o arquivo dos dados recusa o "cadastro"
 
-Cenário:Esquema de cenário com valores não preenchido.i
+Cenário:Cadastro Nova Batida com Valores Inválidos em confinamento 
+       Dado o usuário estar na tela de "Batida"
+       Quando o usuário preenche os campos com valores inválidos "<Nome da Fórmula>", "<data da batida>", "<embalagem de saída>", "<estoque de origem>", "<estoque de destino>" "<quantidade>","<responsável(planejamento)>" e "<responsável(produção)>"
+
+Esquema do Cenário:Cadastro da Batida com valores não preenchido em confinamento 
       Dado o usuário estar na tela de "batida"
       Quando o usuário não preenche o "<campo>" com "<valor>"
       E não seleciona um valor na "opção"
