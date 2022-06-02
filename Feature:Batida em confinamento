@@ -55,8 +55,8 @@ Exemplos:
        |responsável(produção)      |       |
 
 
-Cenário:Cancelar Batida
+Cenário:Cancelar Batida em confinamento 
       Dado o usuário estar na tela de "batida"
-      Quando o usuário já preencheu os campos "batida"
+      Quando o usuário já preencheu os campos em "batida"
       E aciona o botão "cancelar"
       Então é cancelado o cadastro da batida.
