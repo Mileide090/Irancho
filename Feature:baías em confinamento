@@ -3,5 +3,8 @@
 Funcionalidade:Cadastrar Baia de confinamento 
 
 Cenário:Acessar Baia em confinamento 
-
+      Dado o usuário estar navegando no "painel de controle" na tela "visão de escritório"
+      E selecionou a opção "confinamento"
+      Quando o usuário clica o botão "fórmulação de ração"
+      Então é exibida a tela de "formulação de ração"
 
