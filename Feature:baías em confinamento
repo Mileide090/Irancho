@@ -5,6 +5,33 @@ Funcionalidade:Cadastrar Baia de confinamento
 Cenário:Acessar Baia em confinamento 
       Dado o usuário estar navegando no "painel de controle" na tela "visão de escritório"
       E selecionou a opção "confinamento"
-      Quando o usuário clica o botão "fórmulação de ração"
-      Então é exibida a tela de "formulação de ração"
+      Quando o usuário clica o botão "cadastrar baia em confinamento"
+      Então é exibida a tela de "cadastrar baia em confinamento"
 
+
+Cenário:Filtrar Baia em confinamento 
+     Dado o usuário estar na tela da "baia"
+     Quando o usuário preenche com o "X" nome da fazenda em "filtrar"
+     E clica em cima da fazenda "X"
+     Então sistema carrega abrindo o campo "subdivisões da fazenda X"
+
+
+Cenário:Adicionar mais fazenda nova em confinamento
+     Dado o usuário estar na tela da "baia"
+     Quando o usuário deseja registrar a nova fazenda
+     E clica no botão "+ nova fazenda"
+     Então é exibida a tela para cadastrar a fazenda
+
+Cenário:Cadastrar em mais nova fazenda em confinamento válido 
+      Dado o usuário estar na tela "+ nova fazenda"
+      Quando o usuário preenche os campos
+             |nome da fazenda|sigla da fazenda|nome do proprietário|país  |estado|município|unidade de medida da área|área total da fazenda|área de reserva|
+             |Oliveira       |Olivra          |Benício             |brasil| SP   |avaré    |metro quadrado           |455572               |4587           |
+      E clica no botão "salvar"
+      Então o cadastro da fazenda é salvo
+
+Cenário:cadastro inválido no confinamento em mais nova fazenda 
+      Dado o usuário estar na tela "+ nova fazenda"
+      Quando o usuário preenche os campos com valores inválidos "<nome da fazenda>", "<sigla da fazenda>","<nome do proprietário>","<país>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>"
+      E clica no botão "salvar"
+      Então o sistema retorna 
