@@ -22,16 +22,31 @@ Cenário:Adicionar mais fazenda nova em confinamento
      E clica no botão "+ nova fazenda"
      Então é exibida a tela para cadastrar a fazenda
 
+
 Cenário:Cadastrar em mais nova fazenda em confinamento válido 
       Dado o usuário estar na tela "+ nova fazenda"
       Quando o usuário preenche os campos
-             |nome da fazenda|sigla da fazenda|nome do proprietário|país  |estado|município|unidade de medida da área|área total da fazenda|área de reserva|
-             |Oliveira       |Olivra          |Benício             |brasil| SP   |avaré    |metro quadrado           |455572               |4587           |
+             |nome da fazenda|sigla da fazenda|país  |estado|município|unidade de medida da área|área total da fazenda|área de reserva|
+             |Oliveira       |Olivra          |brasil| SP   |avaré    |metro quadrado           |455572               |4587           |
       E clica no botão "salvar"
       Então o cadastro da fazenda é salvo
 
+
 Cenário:cadastro inválido no confinamento em mais nova fazenda 
       Dado o usuário estar na tela "+ nova fazenda"
-      Quando o usuário preenche os campos com valores inválidos "<nome da fazenda>", "<sigla da fazenda>","<nome do proprietário>","<país>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>"
+      Quando o usuário preenche os campos com valores inválidos "<nome da fazenda>", "<sigla da fazenda>","<país>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>"
       E clica no botão "salvar"
-      Então o sistema retorna 
+      Então o sistema retorna a mensagem sinalizando os campos em "vermelho"
+Exemplos:
+     |campo                 | valor  |
+     |nome da fazenda       |        |
+     |sigla da fazenda      |        |
+     |país                  |        |
+     |estado                |        |
+     |município             |        |
+     |unidade de medida área|        |
+     |área total da fazenda |    X   |
+     |área de reserva       |        |
+
+Cenário:
+    
