@@ -10,15 +10,15 @@ Cenário:Acessar Baia em confinamento
 
 
 Cenário:Filtrar Baia em confinamento 
-     Dado o usuário estar na tela da "baia"
+     Dado o usuário estar na tela da "lista da fazendas"
      Quando o usuário preenche com o "X" nome da fazenda em "filtrar"
      E clica em cima da fazenda "X"
      Então sistema carrega abrindo o campo "subdivisões da fazenda X"
 
 
 Cenário:Adicionar mais fazenda nova em confinamento
-     Dado o usuário estar na tela da "baia"
-     Quando o usuário deseja registrar a nova fazenda
+     Dado o usuário estar na tela da "lista da fazendas"
+     Quando o usuário deseja registrar uma nova fazenda
      E clica no botão "+ nova fazenda"
      Então é exibida a tela para cadastrar a fazenda
 
@@ -30,6 +30,7 @@ Cenário:Cadastrar em mais nova fazenda em confinamento válido
              |Oliveira       |Olivra          |brasil| SP   |avaré    |metro quadrado           |455572               |4587           |
       E clica no botão "salvar"
       Então o cadastro da fazenda é salvo
+      E o sistema retorna para tela "lista de fazendas"
 
 
 Cenário:cadastro inválido no confinamento em mais nova fazenda 
@@ -49,5 +50,30 @@ Exemplos:
      |área de reserva       |        |
 
 Esquema do cenário: cadastro com campos não Preenchidos 
-      
-    
+      Dado o usuário estar na tela "cadastrar fazenda"
+      E ele não preenche os campos "<nome da fazenda>", "<estado>","<município>","<área total da fazenda>"e "<área de reserva>"
+      Quando o usuário clica o botão "salvar"
+      Então o sistema retorna a mensagem "Por favor,preencha todos os campos antes de prosseguir"
+Exemplos:
+              |nome da fazenda|estado|município|área total da fazenda|área de reserva|
+              |               |SP    |avaré    |1003                 |4587           |
+              |oliveira       |      |avaré    |1003                 |4587           |
+              |oliveira       |SP    |         |1003                 |4587           |
+              |oliveira       |SP    |avaré    |                     |4587           |
+              |oliveira       |SP    |avaré    |1003                 |               |
+              |               |      |         |                     |               |
+
+
+Cenário:Apagar cadastro da fazenda
+      Dado o usuário estar na tela de "lista da fazendas"
+      E seleciona a fazenda "X"
+      Quando o usuário clica no botão lixeira em "ações"
+      E confirma em "sim" para apagar
+      Então é excluído o registro da fazenda.
+
+
+Cenário:
+
+
+
+
