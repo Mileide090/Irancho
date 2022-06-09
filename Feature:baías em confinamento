@@ -82,7 +82,7 @@ Cenário:Acessar o Cadastro avançado da Fazenda
 
 Cenário:Cadastro avançado da Fazenda válido 
        Dado o usuário estar na tela " cadastro avançado"
-       Quando o usuário preenche os campos
+       Quando o usuário preenche os campos "<Nome da Fazenda>","<Sigla da Fazenda>", "<País>","<estado>","<município>","<unidade de medida da área>",
            
 
 
