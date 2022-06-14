@@ -92,9 +92,9 @@ Cenário:cadastro avançado inválido no confinamento
       Dado o usuário estar na tela "cadastro avançado"
       Quando o usuário preenche os campos com valores inválidos "<nome da fazenda>", "<sigla da fazenda>","<país>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>", "<endereço da fazenda>", "<atividades>", "<cpf/cnpj>", "<inscrição estadual>", "<registro Incra>", "<nirf (receita federal)>", "<possui sisbov>", "<razão social>", "<latitude>", "<longitude>", "<distância da  sedado município (km)>"e "<valor do hectares>"
       E clica no botão "salvar"
-      Então o sistema retorna a seguinte mensagem "Por favor, preencha todos os campos antes de prosseguir"
+      Então o sistema retorna a "<mensagem>"
 Exemplos:
-     |campo                               |valor   |
+     |campo                               |valor   |mensagem                   |
      |nome da fazenda                     |        |
      |sigla da fazenda                    |        |
      |país                                |        |
