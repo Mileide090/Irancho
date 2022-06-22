@@ -65,7 +65,7 @@ Exemplos:
 
 
 Cenário:Apagar cadastro da fazenda
-      Dado o usuário estar na tela de "lista da fazendas"
+      Dado o usuário estar na tela de "lista de fazendas"
       E seleciona a fazenda "X"
       Quando o usuário clica no botão lixeira em "ações"
       E confirma em "sim" para apagar
@@ -73,16 +73,16 @@ Cenário:Apagar cadastro da fazenda
 
 
 Cenário:Acessar o Cadastro avançado da Fazenda 
-      Dado o usuário estar na tela de "Cadastrar fazenda"
-      E o usuário deseja um cadastro mais completo
+      Dado o usuário estar na tela de "cadastrar fazenda"
+      E na tela tem a opção de "cadastro avançado"
       Quando o usuário clica no botão "cadastro avançado"
-      Então o sistema retorna mais campos para o cadastramento avançado
+      Então o sistema abre mais campos para preencher 
 
 
 
 Cenário:Cadastro avançado da Fazenda válido 
        Dado o usuário estar na tela "cadastro avançado"
-       Quando o usuário preenche os campos "<Nome da Fazenda>", "<Sigla da Fazenda>", "<País>", "<estado>", "<município>", "<unidade de medida da área>", "<área total da Fazenda>", "<área de reserva>", "<endereço da fazenda>", "<atividades>", "<cpf/cnpj>", "<Inscrição Estadual>", "<Registro Incra>", "<NIRF (Receita Federal)>", "<Possui SISBOV>", "<Razão Social>", "<Latitude>", "<Longitude>", "<distância da sedado município (km)>"e "<valor do hectare>" 
+       Quando o usuário preenche os campos "<Nome da Fazenda>", "<Sigla da Fazenda>", "<estado>", "<município>", "<unidade de medida da área>", "<área total da Fazenda>", "<área de reserva>", "<endereço da fazenda>", "<atividades>", "<cpf/cnpj>", "<Inscrição Estadual>", "<Registro Incra>", "<NIRF (Receita Federal)>", "<Possui SISBOV>", "<Razão Social>", "<Latitude>", "<Longitude>", "<distância da sedado município (km)>"e "<valor do hectare>" 
        E clica no botão "salvar"
        Então o cadastro é salvo
        E o sistema retorna na tela "lista da fazendas"
@@ -90,20 +90,19 @@ Cenário:Cadastro avançado da Fazenda válido
 
 Cenário:cadastro avançado inválido no confinamento 
       Dado o usuário estar na tela "cadastro avançado"
-      Quando o usuário preenche os campos com valores inválidos "<nome da fazenda>", "<sigla da fazenda>","<país>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>", "<endereço da fazenda>", "<atividades>", "<cpf/cnpj>", "<inscrição estadual>", "<registro Incra>", "<nirf (receita federal)>", "<possui sisbov>", "<razão social>", "<latitude>", "<longitude>", "<distância da  sedado município (km)>"e "<valor do hectares>"
+      Quando o usuário preenche os campos com valores inválidos "<nome da fazenda>", "<sigla da fazenda>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>", "<endereço da fazenda>", "<atividades>", "<cpf/cnpj>", "<inscrição estadual>", "<registro Incra>", "<nirf (receita federal)>", "<possui sisbov>", "<razão social>", "<latitude>", "<longitude>", "<distância da  sedado município (km)>"e "<valor do hectares>"
       E clica no botão "salvar"
-      Então o sistema retorna a mensagem "
+      Então o sistema retorna a "<mensagem>"
 Exemplos:
-     |campo                               |valor   |mensagem                   |
+     |campo                               |valor   |mensagem                                                |
      |nome da fazenda                     |        |
      |sigla da fazenda                    |        | 
-     |país                                |        |
      |estado                              |        |
      |município                           |        |
      |unidade de medida área              |        |
-     |área total da fazenda               |    X   |
-     |área de reserva                     |        |
-     |endereço da fazenda                 |        |
+     |área total da fazenda               |        |
+     |área de reserva                     | 99999  |Por favor,insira um valor menor para Área de Reserva    |
+     |endereço da fazenda                 |  mih   |Por favor,preencha todos os campos antes de prosseguir  |
      |atividades                          |        |
      |cpf/cnpj                            |        |
      |inscrição estadual                  |        |
