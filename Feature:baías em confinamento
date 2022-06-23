@@ -49,6 +49,7 @@ Exemplos:
      |área total da fazenda |    X   |
      |área de reserva       |        |
 
+
 Esquema do cenário: cadastro com campos não Preenchidos 
       Dado o usuário estar na tela "cadastrar fazenda"
       E ele não preenche os campos "<nome da fazenda>", "<estado>","<município>","<área total da fazenda>"e "<área de reserva>"
@@ -74,7 +75,7 @@ Cenário:Apagar cadastro da fazenda
 
 Cenário:Acessar o Cadastro avançado da Fazenda 
       Dado o usuário estar na tela de "cadastrar fazenda"
-      E na tela tem a opção de "cadastro avançado"
+      E ao cadastrar a fazenda tem a opção de "cadastro avançado"
       Quando o usuário clica no botão "cadastro avançado"
       Então o sistema abre mais campos para preencher 
 
@@ -90,12 +91,11 @@ Cenário:Cadastro avançado da Fazenda válido
 
 Cenário:cadastro avançado inválido no confinamento 
       Dado o usuário estar na tela "cadastro avançado"
-      Quando o usuário preenche os campos com valores inválidos "<nome da fazenda>", "<sigla da fazenda>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>", "<endereço da fazenda>", "<atividades>", "<cpf/cnpj>", "<inscrição estadual>", "<registro Incra>", "<nirf (receita federal)>", "<possui sisbov>", "<razão social>", "<latitude>", "<longitude>", "<distância da  sedado município (km)>"e "<valor do hectares>"
+      Quando o usuário preenche os campos com valores inválidos "<sigla da fazenda>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>", "<endereço da fazenda>", "<atividades>", "<cpf/cnpj>", "<inscrição estadual>", "<registro Incra>", "<nirf (receita federal)>", "<possui sisbov>", "<razão social>", "<latitude>", "<longitude>", "<distância da  sedado município (km)>"e "<valor do hectares>"
       E clica no botão "salvar"
       Então o sistema retorna a "<mensagem>"
 Exemplos:
-     |campo                               |valor   |mensagem                                                |
-     |nome da fazenda                     |        |
+     |campo                               |valor   |mensagem                                        
      |sigla da fazenda                    |        | 
      |estado                              |        |
      |município                           |        |
