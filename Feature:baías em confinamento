@@ -35,14 +35,13 @@ Cenário:Cadastrar em mais nova fazenda em confinamento válido
 
 Cenário:cadastro inválido no confinamento em mais nova fazenda 
       Dado o usuário estar na tela "+ nova fazenda"
-      Quando o usuário preenche os campos com valores inválidos "<nome da fazenda>", "<sigla da fazenda>","<país>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>"
+      Quando o usuário preenche os campos com valores inválidos "<nome da fazenda>", "<sigla da fazenda>","<estado>","<município>","<unidade de medida da área>", "<área total da fazenda>" e "<área de reserva>"
       E clica no botão "salvar"
       Então o sistema retorna a mensagem sinalizando os campos em "vermelho"
 Exemplos:
      |campo                 | valor  |
      |nome da fazenda       |        |
      |sigla da fazenda      |        |
-     |país                  |        |
      |estado                |        |
      |município             |        |
      |unidade de medida área|        |
@@ -95,36 +94,23 @@ Cenário:cadastro avançado inválido no confinamento
       E clica no botão "salvar"
       Então o sistema retorna a "<mensagem>"
 Exemplos:
-     |campo                               |valor   |mensagem                                        
-     |sigla da fazenda                    |        | 
-     |estado                              |        |
-     |município                           |        |
-     |unidade de medida área              |        |
-     |área total da fazenda               |        |
+     |campo                               |valor   |mensagem                                                |                                   
+     |sigla da fazenda                    |        |                                                        | 
+     |estado                              |        |                                                        |
+     |município                           |        |                                                        |
+     |unidade de medida área              |        |                                                        |
+     |área total da fazenda               |        |                                                        |
      |área de reserva                     | 99999  |Por favor,insira um valor menor para Área de Reserva    |
      |endereço da fazenda                 |  mih   |Por favor,preencha todos os campos antes de prosseguir  |
-     |atividades                          |        |
-     |cpf/cnpj                            |        |
-     |inscrição estadual                  |        |
-     |registro Incra                      |        |
-     |nirf (receita federal)              |        |
-     |possui sisbov                       |        |
-     |latitude                            |        |
-     |longitude                           |        |
-     |distância da  sedado município (km) |        |
-     |valor do hectares                   |        |
+     |atividades                          |        |                                                        |
+     |cpf/cnpj                            |        |                                                        |
+     |inscrição estadual                  |        |                                                        |
+     |registro Incra                      |        |                                                        |
+     |nirf (receita federal)              |        |                                                        |
+     |possui sisbov                       |        |                                                        |     
+     |latitude                            |        |                                                        |
+     |longitude                           |        |                                                        |
+     |distância da  sedado município (km) |        |                                                        |
+     |valor do hectares                   |        |                                                        |
+              
 
-Esquema de cenário:cadastro avançado com Campos não preenchidos 
-Dado o usuário estar na tela "cadastrar fazenda"
-      E ele não preenche os campos "<Nome da Fazenda>", "<Sigla da Fazenda>", "<País>", "<estado>", "<município>", "<unidade de medida da área>", "<área total da Fazenda>", "<área de reserva>", "<endereço da fazenda>", "<atividades>", "<cpf/cnpj>", "<Inscrição Estadual>", "<Registro Incra>", "<NIRF (Receita Federal)>", "<Possui SISBOV>", "<Razão Social>", "<Latitude>", "<Longitude>", "<distância da sedado município (km)>"e "<valor do hectare>" 
-       E clica no botão "salvar"
-      Quando o usuário clica o botão "salvar"
-      Então o sistema retorna a mensagem "Por favor,preencha todos os campos antes de prosseguir"
-Exemplos:
-              |nome da fazenda|estado|município|área total da fazenda|área de reserva|
-              |               |SP    |avaré    |1003                 |4587           |
-              |oliveira       |      |avaré    |1003                 |4587           |
-              |oliveira       |SP    |         |1003                 |4587           |
-              |oliveira       |SP    |avaré    |                     |4587           |
-              |oliveira       |SP    |avaré    |1003                 |               |
-              |               |      |         |                     |               |
